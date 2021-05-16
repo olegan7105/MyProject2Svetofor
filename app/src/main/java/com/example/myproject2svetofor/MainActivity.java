@@ -1,7 +1,10 @@
 package com.example.myproject2svetofor;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private boolean start_stop = false;
     private Button buttonLight;
     private int counter = 0;
+    Context context = this;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
     public void onClickStart(View view) {
         if (!start_stop) {
             buttonLight.setText("STOP");
-            buttonLight.setBackgroundColor(getResources().getColor(R.color.red));
+
+            buttonLight.setBackgroundColor(ContextCompat.getColor(context, R.color.red));
             start_stop = true;
 
             new Thread(new Runnable() {
@@ -38,20 +44,20 @@ public class MainActivity extends AppCompatActivity {
                         counter++;
                         switch (counter){
                             case 1:
-                                bulb1.setBackgroundColor(getResources().getColor(R.color.green));
-                                bulb2.setBackgroundColor(getResources().getColor(R.color.grey));
-                                bulb3.setBackgroundColor(getResources().getColor(R.color.grey));
+                                bulb1.setBackgroundColor(ContextCompat.getColor(context,R.color.green));
+                                bulb2.setBackgroundColor(ContextCompat.getColor(context,R.color.grey));
+                                bulb3.setBackgroundColor(ContextCompat.getColor(context,R.color.grey));
 
                                 break;
                             case 2:
-                                bulb1.setBackgroundColor(getResources().getColor(R.color.grey));
-                                bulb2.setBackgroundColor(getResources().getColor(R.color.yellow));
-                                bulb3.setBackgroundColor(getResources().getColor(R.color.grey));
+                                bulb1.setBackgroundColor(ContextCompat.getColor(context,R.color.grey));
+                                bulb2.setBackgroundColor(ContextCompat.getColor(context,R.color.yellow));
+                                bulb3.setBackgroundColor(ContextCompat.getColor(context,R.color.grey));
                                 break;
                             case 3:
-                                bulb1.setBackgroundColor(getResources().getColor(R.color.grey));
-                                bulb2.setBackgroundColor(getResources().getColor(R.color.grey));
-                                bulb3.setBackgroundColor(getResources().getColor(R.color.red));
+                                bulb1.setBackgroundColor(ContextCompat.getColor(context,R.color.grey));
+                                bulb2.setBackgroundColor(ContextCompat.getColor(context,R.color.grey));
+                                bulb3.setBackgroundColor(ContextCompat.getColor(context,R.color.red));
                                 counter = 0;
                                 break;
                         }
@@ -72,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
         else{
             start_stop = false;
             buttonLight.setText("START");
-            buttonLight.setBackgroundColor(getResources().getColor(R.color.green));
+            buttonLight.setBackgroundColor(ContextCompat.getColor(context, R.color.green));
+
         }
     }
     @Override
