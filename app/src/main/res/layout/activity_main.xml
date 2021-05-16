@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="150sp"
+        android:layout_marginTop="600sp"
+        android:backgroundTint="@color/green"
+        android:onClick="onClickStart"
+        android:text="@string/button"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/imageViewTrafficLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        app:srcCompat="@drawable/traffic_light" />
+
+    <LinearLayout
+        android:id="@+id/bulb1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="212dp"
+        android:background="@color/grey"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bulb2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="316dp"
+        android:background="@color/grey"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bulb3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="420dp"
+        android:background="@color/grey"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
+
+
